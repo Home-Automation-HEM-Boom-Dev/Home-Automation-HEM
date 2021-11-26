@@ -1,0 +1,23 @@
+@use "../../styles/colors";
+
+.user-container {
+  padding: 1.25rem;
+  max-width: 23.75rem;
+}
+
+.avatar-style {
+  border-radius: 50%;
+}
+
+.username-style {
+  font-family: Roboto !important;
+  font-weight: bold !important;
+  font-size: 25px !important;
+  line-height: 21px !important;
+}
+
+.grid-container{
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+}
