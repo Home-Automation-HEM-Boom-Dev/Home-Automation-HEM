@@ -1,7 +1,10 @@
 @use "../../styles/colors.scss";
 
 .wrapper {
-    background-color: colors.$primary_main;
     display: flex;
-    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#7441F3 50%, #F8F8F8 50%);
 }
+
