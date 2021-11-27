@@ -1,6 +1,12 @@
 import Login from "../src/components/login/Login.jsx"
 import User from "../src/components/user/User.jsx"
+import Weather from "../src/components/weather/Weather.jsx"
 
 export default function Index() {
-  return <User username={"John Doe"} avatar={'/images/avatar.png'} size={70}/>;
+  
+return (
+  <>
+    <Weather degrees={22} type={"cloudy"}/>
+  </>
+);
 }
