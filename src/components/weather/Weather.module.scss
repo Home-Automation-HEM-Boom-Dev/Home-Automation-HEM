@@ -1,0 +1,29 @@
+@use "../../styles/colors";
+
+.weather-wrapper{
+    display: inline-block;
+    max-width: 500px;
+}
+
+.weather{
+    font-family: Roboto !important; 
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 15.4771px !important;
+    line-height: 18px !important;
+    color: #7441F3;
+}
+
+
+.image{
+    max-width: 80px;
+}
+
+.weather-info {
+    height: 100px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    justify-content: space-between;
+}
