@@ -1,0 +1,7 @@
+@use "../../styles/colors.scss";
+
+.wrapper {
+    background-color: colors.$primary_main;
+    display: flex;
+    border-radius: 15px;
+}
