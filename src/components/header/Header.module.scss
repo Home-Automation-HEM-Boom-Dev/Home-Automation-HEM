@@ -1,0 +1,25 @@
+
+.header-wrapper {
+background: #FFFFFF;
+box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.15);
+border-radius: 15px;
+display: grid;
+max-width: 80%;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2rem;
+}
+
+.left-container {
+    position: relative;
+    margin: 2rem;
+    margin-left: auto;
+    float: left;
+}
+
+.right-container {
+    position: relative;
+    margin: 2rem;
+    float: right;
+}

@@ -12,8 +12,7 @@ export default function Time() {
     const [minutes, setMinutes] = useState(new Date().getMinutes());
 
 
-    console.log(hours)
-    console.log(minutes)
+    
     useEffect(() => {
 
         let time = setInterval(() => {
