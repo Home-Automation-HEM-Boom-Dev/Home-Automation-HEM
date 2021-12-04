@@ -1,2 +1,45 @@
 @use "../../styles/colors";
 
+.user-log-out{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+}
+
+.log-out{
+    width: 120px;
+    height: 44px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.selected{
+    background-color: rgba(116, 65, 243, 0.17) !important;
+    color: #7441F3;
+    svg {
+        color: #7441F3;
+    }
+    div {
+        color: #7441F3;
+    }
+  }
+
+.listItem {
+    svg {
+        width: 33px;
+        height: 45px;
+    }
+
+    span {
+        border-radius: 5px;
+    }
+}
+
+.drawer > div{
+    max-width: 240px;
+    overflow-x: hidden;
+    border: 0;
+}
+
