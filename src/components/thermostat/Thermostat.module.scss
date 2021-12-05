@@ -1,0 +1,61 @@
+.container{
+    width: 50.1875rem;
+    height: 25.125rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    margin-left: 20.625rem;
+    margin-top: 9.375rem;
+}
+
+.left-semi-circle{
+    position: absolute !important;
+    transform: rotate(180deg) !important;
+}
+
+.statistic {
+    border-radius: 20px;
+    background: linear-gradient(284.07deg, #EC6953 0%, #DF53A8 100%);
+    height: 25.75rem;
+    width: 100%;
+}
+
+.circular-progress {
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    margin-top: 2.8125rem;
+}
+
+.temperature-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3.4375rem;
+}
+
+.buttons{
+    font-size: 2rem !important;
+    color: #FFFFFF
+}
+
+.temperature{
+    color: #FFFFFF;
+    font-size: 85px;
+    margin-left: 15px;
+}
+
+.temperature-graph{
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.graph{
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(0, 0, 0, 0.05);
+    height: 11.25rem;
+}
