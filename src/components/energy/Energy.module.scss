@@ -1,0 +1,53 @@
+.container{
+    width: 50.1875rem;
+    height: 25.125rem;
+    margin-top: 7.375rem;
+    margin-left: 20.625rem;
+}
+
+.graph{
+    border-radius: 20px;
+    background: #FFFFFF;
+    padding-bottom: 20px;
+    div{
+        svg{
+            g{
+                font-size: 15px;
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+.energy-header{
+    display: flex;
+    align-items: center;
+    max-width: 91.5rem;
+    margin-bottom: 15px;
+  }
+  
+.form-control{
+    margin-left: auto !important;
+    align-items: center;
+    width: 220px !important;
+    height: 50px !important;
+    div{
+        background: rgba(116, 65, 243, 0.07);
+        box-shadow: 1px 3px #BFBFBF;
+        border-radius: 30px;
+        width: 220px;
+        height: 50px;
+    }
+    label{
+        color:#7441F3;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    svg{
+        color:#7441F3;
+        font-weight: 700;
+    }
+}

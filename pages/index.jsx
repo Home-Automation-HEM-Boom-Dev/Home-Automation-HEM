@@ -3,6 +3,7 @@ import Weather from "../src/components/weather/Weather.jsx";
 import Time from "../src/components/time/Time.jsx";
 import Navigation from "../src/components/navigation/Navigation.jsx";
 import Thermostat from "../src/components/thermostat/Thermostat";
+import Energy from "../src/components/energy/Energy.jsx"
 import Header from "../src/components/header/Header.jsx";
 
 
@@ -16,6 +17,16 @@ export default function Index() {
     { temperature: 10, hour: 17 },
   ]
 
+  const edata = [
+    { temperature: 1, hour: 12 },
+    { temperature: 25, hour: 13 },
+    { temperature: 1, hour: 14 },
+    { temperature: 15, hour: 15 },
+    { temperature: 1, hour: 16 },
+    { temperature: 10, hour: 17 },
+    { temperature: 1, hour: 18 },
+    { temperature: 1, hour: 19 }
+  ]
 
   return (
     <>
@@ -28,6 +39,7 @@ export default function Index() {
       />
       <Navigation />
       <Thermostat data={data} />
+      <Energy data={edata}/>
     </>
   );
 }
