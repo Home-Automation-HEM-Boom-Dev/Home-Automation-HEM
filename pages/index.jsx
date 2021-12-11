@@ -5,7 +5,7 @@ import Navigation from "../src/components/navigation/Navigation.jsx";
 import Thermostat from "../src/components/thermostat/Thermostat";
 import Energy from "../src/components/energy/Energy.jsx"
 import Header from "../src/components/header/Header.jsx";
-// import MuiCard from "../src/components/card/Card.jsx";
+import Scenes from "../src/components/scenes/Scenes";
 
 
 
@@ -30,6 +30,15 @@ export default function Index() {
     { temperature: 1, hour: 19 }
   ]
 
+  const cards=[
+    { iconUrl: '../images/morning.svg', outlined: false },
+    { iconUrl: '../images/alarm-clock.svg', outlined: false },
+    { iconUrl: '../images/shower.svg', outlined: false },
+    { iconUrl: '../images/tea-cup.svg', outlined: false },
+    { iconUrl: '../images/rock.svg', outlined: false },
+    { iconUrl: '../images/plus.svg', outlined: true },
+  ]
+
   return (
     <>
       <Header left={<User name={"John Doe"} avatar={"/images/avatar.png"} size={114} headingSize={"h1"} hasWelcome={true} />}
@@ -42,7 +51,7 @@ export default function Index() {
       <Navigation />
       <Thermostat data={data} />
       <Energy data={edata}/>
-      {/* <MuiCard  /> */}
+      <Scenes cards={cards} />  
     </>
   );
 }
