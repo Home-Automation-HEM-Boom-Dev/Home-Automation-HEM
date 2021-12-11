@@ -5,6 +5,8 @@ import Navigation from "../src/components/navigation/Navigation.jsx";
 import Thermostat from "../src/components/thermostat/Thermostat";
 import Energy from "../src/components/energy/Energy.jsx"
 import Header from "../src/components/header/Header.jsx";
+// import MuiCard from "../src/components/card/Card.jsx";
+
 
 
 export default function Index() {
@@ -40,6 +42,7 @@ export default function Index() {
       <Navigation />
       <Thermostat data={data} />
       <Energy data={edata}/>
+      {/* <MuiCard  /> */}
     </>
   );
 }
