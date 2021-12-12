@@ -8,8 +8,8 @@ export default function Card({ iconUrl, outlined = false, title}) {
     const svgOrMp4 = `${iconUrl.substring(isSvgorVideo)}`;
 
     return (
-        <CardWrap className={classNames(styles['card'])} style={{ border: outlined ? "3px solid #7441F3" : "" }}>
-            <CardContent >
+        <CardWrap className={svgOrMp4 != ".svg" ? classNames(styles['video-card']) : classNames(styles['card'])} style={{ border: outlined ? "3px solid #7441F3" : "" }}>
+            <CardContent className={svgOrMp4 != ".svg" ? classNames(styles['video-card-content']) : ""}>
                 <IconButton>
                     {iconUrl && <CardMedia component={svgOrMp4 === ".svg" ? "img" : "video"} src={`${iconUrl}`} autoPlay />}
                 </IconButton>

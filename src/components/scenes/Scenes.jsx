@@ -9,10 +9,10 @@ export default function Scenes({ cards = [] }) {
             <div className={classNames(styles["scenes-header"])}>
                 <Typography variant="h3">Scenes</Typography>
             </div>
-            <Grid container rowSpacing={1.5}>
+            <Grid container rowSpacing={3} columnSpacing={3}>
                 {cards.map((card, i) => {
                     return (
-                        <Grid item key={i} xs={4}><Card iconUrl={card.iconUrl} outlined={card.outlined} /></Grid>
+                        <Grid item key={i} xs={12} sm={6} lg={4}><Card iconUrl={card.iconUrl} outlined={card.outlined} /></Grid>
                     )
                 })}
             </Grid>
