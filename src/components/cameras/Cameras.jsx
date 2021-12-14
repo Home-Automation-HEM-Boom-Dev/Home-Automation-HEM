@@ -15,7 +15,7 @@ export default function Cameras({ cameras, hasButton = false }) {
                     <Grid container>
                         <Grid item>
                             <div className={classNames(styles["big-card"])}>
-                                <Card iconUrl={current.videoUrl || ""} />
+                                <Card autoPlay={true} iconUrl={current.videoUrl || ""} />
                             </div>
                         </Grid>
                     </Grid>
@@ -25,7 +25,7 @@ export default function Cameras({ cameras, hasButton = false }) {
                         {cameras.map((camera, i) => (
                             <Grid item key={i}>
                                 <div className={classNames(styles["mini-card"])} onClick={() => setChoosenCard(i)}>
-                                    <Card iconUrl={camera.videoUrl} outlined={i == choosenCard ? true : false} onClick={() => setCurrent(camera)} />
+                                    <Card autoPlay={false} iconUrl={camera.videoUrl} outlined={i == choosenCard ? true : false} onClick={() => setCurrent(camera)} />
                                 </div>
                             </Grid>
                         ))}
