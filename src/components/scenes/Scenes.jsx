@@ -12,7 +12,7 @@ export default function Scenes({ cards = [] }) {
             <Grid container rowSpacing={3} columnSpacing={3}>
                 {cards.map((card, i) => {
                     return (
-                        <Grid item key={i} xs={12} sm={6} lg={4}><Card iconUrl={card.iconUrl} outlined={card.outlined} /></Grid>
+                        <Grid item key={i} xs={12} sm={6} lg={4}><Card iconUrl={card.iconUrl} outlined={card.outlined} onClick={() => {}} /></Grid>
                     )
                 })}
             </Grid>

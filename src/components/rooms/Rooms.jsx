@@ -13,7 +13,7 @@ export default function Rooms({ rooms = [] }) {
         {rooms.map((room, index) => {
           return (
             <Grid item key={index} xs={12} sm={6} lg={2}>
-              <Card title={room.title} iconUrl={room.iconUrl} outlined={room.outlined} />
+              <Card title={room.title} iconUrl={room.iconUrl} outlined={room.outlined} onClick={() => {}} />
             </Grid>
           )
         })}

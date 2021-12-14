@@ -1,6 +1,11 @@
 @use "../../styles/colors.scss";
 
-.card {
+.card{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.card-component {
     display: flex;
     justify-content: center;
     align-items: center;
