@@ -36,10 +36,10 @@ export default function Dashboard() {
   const cameras = [
     { videoUrl: "/images/balcony.mp4" },
     { videoUrl: "/images/bathroom.mp4" },
-    { videoUrl: "/images/front-door.mp4" },
-    { videoUrl: "/images/living room 2.mp4" },
     { videoUrl: "/images/garden.mp4" },
     { videoUrl: "/images/kitchen.mp4" },
+    { videoUrl: "/images/living room 2.mp4" },
+    { videoUrl: "/images/front-door.mp4" },
   ]
 
   let rooms = [
@@ -53,7 +53,6 @@ export default function Dashboard() {
 
   return (
     <>
-      {/* <Cameras cameras={cameras} /> */}
       <Container maxWidth={"false"} disableGutters className={classNames(styles.container)}>
         <Header left={<User name={"John Doe"} avatar={"/images/avatar.png"} size={114} headingSize={"h1"} hasWelcome={true} />} right={<><Weather degrees={22} type={"cloudy"} /><Time /></>} />
         <Navigation />
@@ -68,16 +67,18 @@ export default function Dashboard() {
             <Scenes cards={cards} />
           </Grid>
           <Grid item>
-            <div className={classNames(styles["thermostat-header"])}>
-              <Typography variant="h3">Thermostat</Typography>
+            <div className={classNames(styles["cameras-header"])}>
+              <Typography variant="h3">Cameras</Typography>
             </div>
-            <Thermostat data={data} />
+            <Cameras cameras={cameras} hasButton={true} />
           </Grid>
           <Grid item>
             <Energy data={data} />
           </Grid>
+          <Grid item xs={12}>
+            <Rooms rooms={rooms} />
+          </Grid>
         </Grid>
-        <Rooms rooms={rooms} />
       </Container >
     </>
   );

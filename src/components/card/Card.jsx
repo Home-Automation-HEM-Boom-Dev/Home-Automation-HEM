@@ -5,7 +5,7 @@ import classNames from "classnames";
 export default function Card({ iconUrl, outlined = false, title, variant, onClick }) {
     return (
         <div className={classNames(styles['card'])} onClick={onClick}>
-            <CardWrap className={classNames(styles['card-component'])} style={{ border: outlined ? "3px solid #7545EC" : null }}>
+            <CardWrap className={classNames(styles['card-component'])} style={{ border: outlined ? "4px solid #7545EC" : null }}>
                 <CardContent>
                     <IconButton>
                         {iconUrl ? <CardMedia component={iconUrl.includes("svg") ? "img" : "video"} src={`${iconUrl}`} autoPlay /> : null}
