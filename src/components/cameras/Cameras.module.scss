@@ -6,42 +6,30 @@
 .big-card{
     div{
         div{
-            div{
-                // button{
-                    video{
-                        width: 560px;
-                        height: 315px;
-                    }
-                //     padding: 0 !important; 
-                // }
-                padding: 0 !important;
+            video{
+                width: 560px;
+                height: 315px;
             }
+        }
             background-color: white !important;
             width: 478px;
             height: 315px;
         }
-    }
 }
 
 .mini-card{
     div{
         div{
-            div{
-                // button{
-                    video{
-                        width: 160px;
-                        height: 90px;
-                    }
-                //     padding: 0 !important; 
-                // }
-                padding: 0 !important;
+            video{
+                width: 160px;
+                height: 90px;
             }
+        }
             background-color: white !important;
             width: 97px;
             height: 90px;
         }
-    } 
-}
+} 
 
 .main-grid-container{
     width: 50.1875rem !important;

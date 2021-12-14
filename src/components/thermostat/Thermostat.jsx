@@ -40,8 +40,8 @@ export default function Thermostat({ data }) {
             </div>
             <div className={classNames(styles["graph"])}>
                 <h5 className={classNames(styles["temperature-graph"])}>TEMPERATURE GRAPH</h5>
-                <ComposedChart width={803} height={150} data={data}>
-                    <Line type="monotone" dataKey="temperature" stroke="#FFFFFF" strokeWidth={3} dot={{ strokeWidth: 7 }} />
+                <ComposedChart id={"composedChart"} width={803} height={150} data={data}>
+                    <Line type="monotone" dataKey="temperature" stroke="#FFFFFF" strokeWidth={3} dot={{ strokeWidth: 7 }}/>
                 </ComposedChart>
             </div>
         </div>
