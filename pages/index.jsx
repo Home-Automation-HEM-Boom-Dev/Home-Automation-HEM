@@ -34,16 +34,11 @@ export default function Dashboard() {
   ]
 
   const cameras = [
-    // { videoUrl: "/images/balcony.mp4" },
-    // { videoUrl: "/images/bathroom.mp4" },
-    // { videoUrl: "/images/garden.mp4" },
-    // { videoUrl: "/images/kitchen.mp4" },
-    // { videoUrl: "/images/living room 2.mp4" },
-    { videoUrl: "/images/front-door.mp4" },
-    { videoUrl: "/images/front-door.mp4" },
-    { videoUrl: "/images/front-door.mp4" },
-    { videoUrl: "/images/front-door.mp4" },
-    { videoUrl: "/images/front-door.mp4" },
+    { videoUrl: "/images/balcony.mp4" },
+    { videoUrl: "/images/bathroom.mp4" },
+    { videoUrl: "/images/garden.mp4" },
+    { videoUrl: "/images/kitchen.mp4" },
+    { videoUrl: "/images/living room 2.mp4" },
     { videoUrl: "/images/front-door.mp4" },
   ]
 

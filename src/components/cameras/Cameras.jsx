@@ -5,8 +5,8 @@ import Card from '../card/Card.jsx';
 import { Grid } from '@mui/material';
 
 export default function Cameras({ cameras, hasButton = false }) {
-    const [current, setCurrent] = useState({});
-    const [choosenCard, setChoosenCard] = useState();
+    const [current, setCurrent] = useState({videoUrl: "/images/balcony.mp4"});
+    const [choosenCard, setChoosenCard] = useState(0);
 
     return (
         <div className={classNames(styles["container"])}>
@@ -15,7 +15,7 @@ export default function Cameras({ cameras, hasButton = false }) {
                     <Grid container>
                         <Grid item>
                             <div className={classNames(styles["big-card"])}>
-                                <Card autoPlay={true} iconUrl={current.videoUrl || ""} />
+                                <Card autoPlay={true} iconUrl={current.videoUrl} />
                             </div>
                         </Grid>
                     </Grid>
