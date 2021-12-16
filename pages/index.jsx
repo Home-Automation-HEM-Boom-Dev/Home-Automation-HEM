@@ -88,7 +88,6 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
-      <Devices devices = {devices}/>
     </>
   );
 }
