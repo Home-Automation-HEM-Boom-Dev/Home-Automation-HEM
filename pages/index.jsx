@@ -11,6 +11,7 @@ import Cameras from "../src/components/cameras/Cameras.jsx"
 import { Container, Grid, Typography } from "@mui/material";
 import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
+import Devices from "../src/components/devices/Devices.jsx";
 
 
 
@@ -51,6 +52,13 @@ export default function Dashboard() {
     { iconUrl: '/images/plus.svg', title: 'Add room', outlined: true },
   ];
 
+  const devices = [
+    { iconUrl: '/images/bed.svg', title: 'Living room' },
+    { iconUrl: '/images/bed.svg', title: 'Bedroom' },
+    { iconUrl: '/images/bed.svg', title: 'Bathroom' },
+    { iconUrl: '/images/bed.svg', title: 'Toilet' },
+  ]
+
   return (
     <>
       <Container maxWidth={"false"} disableGutters className={classNames(styles.container)}>
@@ -80,6 +88,7 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
+      <Devices devices = {devices}/>
     </>
   );
 }
