@@ -11,7 +11,7 @@ import Cameras from "../src/components/cameras/Cameras.jsx"
 import { Container, Grid, Typography } from "@mui/material";
 import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
-import Devices from "../src/components/devices/Devices.jsx";
+import Modal from "../src/components/modal/Modal.jsx";
 
 
 
@@ -88,6 +88,7 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
+      <Modal title="title" buttonText="button"/>
     </>
   );
 }
