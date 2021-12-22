@@ -6,9 +6,7 @@
     margin-left: -420px;
 }
 
-
-
-.sth-wrapper {
+.container-wrapper {
 border-radius: 15px;
 max-width: 1655px;
 height: 195px;
@@ -19,7 +17,6 @@ margin-left: 420px;
 
 .left-container {
     margin: 2rem;
-    margin-left: auto;
     float: left;
 }
 
@@ -27,6 +24,14 @@ margin-left: 420px;
     margin-top: 3.5rem;
     margin-right: 2rem;
     float: right;
+}
+
+.room-left{
+    margin: 3.8rem !important;
+}
+
+.room-right{
+    margin: 3rem !important;
 }
 
 @media screen and (max-width: 1050px) {

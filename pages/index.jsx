@@ -11,9 +11,6 @@ import Cameras from "../src/components/cameras/Cameras.jsx"
 import { Container, Grid, Typography } from "@mui/material";
 import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
-import Modal from "../src/components/modal/Modal.jsx";
-
-
 
 export default function Dashboard() {
   const data = [
@@ -37,7 +34,7 @@ export default function Dashboard() {
   const cameras = [
     { videoUrl: "/images/balcony.mp4" },
     { videoUrl: "/images/bathroom.mp4" },
-    { videoUrl: "/images/garden.mp4" },
+    { videoUrl: "/images/kitchen.mp4" },
     { videoUrl: "/images/kitchen.mp4" },
     { videoUrl: "/images/living room 2.mp4" },
     { videoUrl: "/images/front-door.mp4" },
@@ -49,14 +46,15 @@ export default function Dashboard() {
     { iconUrl: '/images/bed.svg', title: 'Bathroom' },
     { iconUrl: '/images/bed.svg', title: 'Toilet' },
     { iconUrl: '/images/bed.svg', title: 'Patio' },
-    { iconUrl: '/images/plus.svg', title: 'Add room', outlined: true },
+    { iconUrl: '/images/outlined-plus.svg', title: 'Add room', outlined: true },
   ];
 
   const devices = [
-    { iconUrl: '/images/bed.svg', title: 'Living room' },
-    { iconUrl: '/images/bed.svg', title: 'Bedroom' },
-    { iconUrl: '/images/bed.svg', title: 'Bathroom' },
-    { iconUrl: '/images/bed.svg', title: 'Toilet' },
+    { iconUrl: '/images/bulb.svg', variant: 'ON' },
+    { iconUrl: '/images/bulb.svg', variant: 'OFF' },
+    { iconUrl: '/images/plug.svg', variant: 'OFF' },
+    { iconUrl: '/images/plug.svg', variant: 'OFFLINE' },
+    { iconUrl: '/images/plus.svg', outlined: true }
   ]
 
   return (
@@ -88,7 +86,6 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
-      <Modal title="title" buttonText="button"/>
     </>
   );
 }

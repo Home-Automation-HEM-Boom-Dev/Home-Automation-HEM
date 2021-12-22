@@ -5,12 +5,15 @@ import classNames from "classnames";
 export default function Card({ iconUrl, outlined = false, title, variant, autoPlay, onClick }) {
     return (
         <div className={classNames(styles['card'])} onClick={onClick}>
-            <Typography variant="h2">{title}</Typography>
-            <CardWrap className={classNames(styles['card-component'])} style={{ border: outlined ? "4px solid #7545EC" : null }}>
-            <Chip className={classNames(styles['chip'])}>{variant === 'offline' ? "!" : ""}</Chip>
+            <CardWrap 
+                className={classNames(styles['card-component'], 
+                variant?.toLowerCase() === "offline" && styles['offline'], 
+                variant?.toLowerCase() === "on" && styles['on'])} 
+                style={{ border: outlined ? "4px solid #7545EC" : null }}>
+                    
+                {variant?.toLowerCase() === "offline" ? <Chip className={classNames(styles['chip'])} label={"!"} /> : null}
                 <CardContent>
                     {iconUrl ? (iconUrl.includes("svg") ? <img src={iconUrl} alt="img" /> : <video src={iconUrl} autoPlay={autoPlay} alt="video" />) : null}
-                    <Typography variant="h5">{variant}</Typography>
                 </CardContent>
                 {title ? <Typography className={styles["card-title"]}>{title}</Typography> : null}
             </CardWrap>
