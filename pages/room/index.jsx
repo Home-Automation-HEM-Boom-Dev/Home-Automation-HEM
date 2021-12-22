@@ -26,10 +26,7 @@ export default function Room() {
 
   const deviceCount = () => {
     const deviceCopy = [...devices];
-    deviceCopy.map((device) => {
-      (device.variant === 'OFFLINE' || device.iconUrl === '/images/plug.svg') && deviceCopy.pop(device)
-    })
-    return deviceCopy.length
+    return deviceCopy.filter(device => device.variant != "OFFLINE" && device.iconUrl != "/images/plus.svg").length;
   }
 
   return (
