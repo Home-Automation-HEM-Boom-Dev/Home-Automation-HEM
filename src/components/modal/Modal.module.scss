@@ -1,5 +1,22 @@
-// .modal-wrapper {
-//     margin: 0 auto;
-//     padding: 2rem;
-//     max-width: 600px;
-// }
+.modal-wrapper {
+    div{
+        min-width: 35rem;
+        align-items: center;
+        h2{
+            background-color: rgba(116, 65, 243, 0.2);
+            text-align: center;
+            text-transform: uppercase;
+            color: rgba(116, 65, 243, 1);
+            max-width: 100%;
+            min-width: 100%;
+        }
+        button{
+            color: white;
+            background-color: rgba(116, 65, 243, 1);
+            margin-bottom: 15px;
+            border-radius: 25px;
+            max-width: 70%;
+            min-width: 70%;
+        }
+    }
+}
