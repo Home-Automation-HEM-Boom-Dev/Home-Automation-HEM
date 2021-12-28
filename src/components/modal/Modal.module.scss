@@ -1,22 +1,42 @@
-.modal-wrapper {
-    div{
-        min-width: 35rem;
-        align-items: center;
-        h2{
-            background-color: rgba(116, 65, 243, 0.2);
-            text-align: center;
-            text-transform: uppercase;
-            color: rgba(116, 65, 243, 1);
-            max-width: 100%;
-            width: 100%;
+.modal-wrapper > div > div[class^="MuiPaper-root"]{
+    div[class^="MuiDialogContent-root"]{
+        overflow: hidden;
+        padding-right: 15px;
+        div [class^="MuiOutlinedInput-root"]{
+            margin-top: 25px;
+            margin-bottom: 25px;
+            input{
+                max-width: 700px;
+                width: 700px;
+                background-color: #F8F8F8;
+            }
+            input::placeholder{
+                opacity: 1;
+            }
+            fieldset{
+                border: 0;
+            }
         }
-        button{
-            color: white;
-            background-color: rgba(116, 65, 243, 1);
-            margin-bottom: 15px;
-            border-radius: 25px;
-            max-width: 70%;
-            width: 70%;
-        }
+    }
+    
+    max-width: 50rem;
+    min-width: 35rem;
+    align-items: center;
+    border-radius: 15px;
+    h2{
+        background-color: rgba(116, 65, 243, 0.2);
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(116, 65, 243, 1);
+        max-width: 100%;
+        width: 100%;
+    }
+    button{
+        color: white;
+        background-color: rgba(116, 65, 243, 1);
+        margin-bottom: 15px;
+        border-radius: 25px;
+        max-width: 70%;
+        min-width: 35%;
     }
 }
