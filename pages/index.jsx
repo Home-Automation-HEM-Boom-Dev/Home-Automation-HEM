@@ -13,7 +13,7 @@ import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
 import SceneComposer from "../src/components/scenes/SceneComposer";
 import AddScene from "../src/components/scenes/AddScene";
-import EditScene from "../src/components/scenes/ЕditScene"
+import EditScene from "../src/components/scenes/EditScene"
 import roomsData from "../data/rooms.json"
 import devicesData from "../data/devices.json"
 import { useState } from "react";
