@@ -4,7 +4,7 @@ import styles from './Scenes.module.scss'
 import classNames from "classnames";
 import { useState } from 'react';
 
-export default function Scenes({ cards = [], selected, onScene = () => { } }) {
+export default function Scenes({ cards = [], selected = {id: 0}, onScene = () => { } }) {
     return (
         <div className={classNames(styles['scenes-container'])}>
             <Grid container rowSpacing={3} columnSpacing={3}>
