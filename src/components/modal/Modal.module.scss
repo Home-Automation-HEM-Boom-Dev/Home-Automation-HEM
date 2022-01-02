@@ -6,8 +6,8 @@
             margin-top: 25px;
             margin-bottom: 25px;
             input{
-                max-width: 700px;
-                width: 700px;
+                max-width: 750px;
+                width: 750px;
                 background-color: #F8F8F8;
             }
             input::placeholder{
@@ -19,7 +19,7 @@
         }
     }
     
-    max-width: 50rem;
+    max-width: 54rem;
     min-width: 35rem;
     align-items: center;
     border-radius: 15px;
@@ -34,8 +34,9 @@
     button{
         color: white;
         background-color: rgba(116, 65, 243, 1);
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         border-radius: 25px;
+        padding: 13px 0 13px 0;
         max-width: 70%;
         min-width: 35%;
     }
