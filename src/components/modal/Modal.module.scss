@@ -5,9 +5,12 @@
         div [class^="MuiOutlinedInput-root"]{
             margin-top: 25px;
             margin-bottom: 25px;
+            img{
+                width: 80px;
+            }
             input{
-                max-width: 750px;
-                width: 750px;
+                max-width: 710px;
+                width: 710px;
                 background-color: #F8F8F8;
             }
             input::placeholder{

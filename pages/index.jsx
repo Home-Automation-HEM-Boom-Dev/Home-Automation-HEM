@@ -13,6 +13,7 @@ import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
 import SceneComposer from "../src/components/scenes/SceneComposer";
 import AddScene from "../src/components/scenes/AddScene";
+import AddRoom from "../src/components/rooms/AddRoom";
 import EditScene from "../src/components/scenes/EditScene"
 import roomsData from "../data/rooms.json"
 import devicesData from "../data/devices.json"
@@ -99,7 +100,8 @@ export default function Dashboard() {
         </Grid>
       </Container >
       {/* <AddScene title={"ADD SCENE"} buttonText={"ADD NEW SCENE"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
-      <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/>
+      {/* <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
+      <AddRoom title={"ADD ROOM"} buttonText={"ADD NEW ROOM"} onSubmit={() => {}} handleClose={() => {}}/>
     </>
   );
 }
