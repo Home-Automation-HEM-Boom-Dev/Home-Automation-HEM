@@ -101,7 +101,7 @@ export default function Dashboard() {
       </Container >
       {/* <AddScene title={"ADD SCENE"} buttonText={"ADD NEW SCENE"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
       {/* <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
-      <AddRoom title={"ADD ROOM"} buttonText={"ADD NEW ROOM"} onSubmit={() => {}} handleClose={() => {}}/>
+      <AddRoom onSubmit={() => {}} handleClose={() => {}}/>
     </>
   );
 }
