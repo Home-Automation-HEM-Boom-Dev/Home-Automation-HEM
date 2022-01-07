@@ -5,6 +5,6 @@ import classNames from "classnames";
 
 export default function AddRoom({ open, onSubmit, handleClose }) {
     return (
-            <Modal open={open} title={"Add Room"} buttonText={"Add New Room"} handleSubmit={onSubmit} handleClose={handleClose} children={<TextField placeholder="Room Name" InputProps={{startAdornment: <img src="/images/bed.svg" />}}/>} />
+            <Modal open={open} title={"Add Room"} buttonText={"Add New Room"} handleSubmit={onSubmit} handleClose={handleClose} children={<TextField placeholder="Room Name" InputProps={{startAdornment: <img src="/images/bed.svg" />}}/>} buttonProps={{"color" : "primary"}} />
     )
 }

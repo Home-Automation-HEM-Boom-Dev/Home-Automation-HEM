@@ -10,6 +10,6 @@ export default function EditScene({ open, title, buttonText, onSubmit, handleClo
     })
 
     return (
-        <Modal open={open} title={title} buttonText={buttonText} children={children} handleSubmit={onSubmit} onClose={handleClose} />
+        <Modal open={open} title={title} buttonText={buttonText} children={children} handleSubmit={onSubmit} onClose={handleClose} buttonProps={{"color" : "primary"}}/>
     );
 }

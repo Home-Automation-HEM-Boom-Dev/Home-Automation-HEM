@@ -9,6 +9,6 @@ export default function AddScene({ open, title, buttonText, onSubmit, handleClos
     })
     
     return (
-        <Modal open={open} title={title} buttonText={buttonText} children={children} handleSubmit={onSubmit} onClose={handleClose} />
+        <Modal open={open} title={title} buttonText={buttonText} children={children} handleSubmit={onSubmit} onClose={handleClose} buttonProps={{"color" : "primary"}} />
     );
 }

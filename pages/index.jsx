@@ -14,6 +14,7 @@ import styles from "./Dashboard.module.scss";
 import SceneComposer from "../src/components/scenes/SceneComposer";
 import AddScene from "../src/components/scenes/AddScene";
 import AddRoom from "../src/components/rooms/AddRoom";
+import ChangeRoom from "../src/components/rooms/ChangeRoom";
 import EditScene from "../src/components/scenes/EditScene"
 import roomsData from "../data/rooms.json"
 import devicesData from "../data/devices.json"
@@ -101,7 +102,8 @@ export default function Dashboard() {
       </Container >
       {/* <AddScene title={"ADD SCENE"} buttonText={"ADD NEW SCENE"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
       {/* <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
-      <AddRoom onSubmit={() => {}} handleClose={() => {}}/>
+      {/* <AddRoom onSubmit={() => {}} handleClose={() => {}}/> */}
+      <ChangeRoom onSubmit={() => {}} handleClose={() => {}} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> 
     </>
   );
 }
