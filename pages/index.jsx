@@ -19,8 +19,7 @@ import devicesData from "../data/devices.json"
 import { useState } from "react";
 
 export default function Dashboard() {
-  const [choosenCard, setChoosenCard] = useState(0);
-
+  
   const data = [
     { temperature: 25, hour: 12 },
     { temperature: 13, hour: 13 },
