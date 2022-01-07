@@ -4,92 +4,53 @@ import { Grid, Typography } from "@mui/material";
 import Scenes from "./Scenes";
 import { useMemo } from "react";
 
-const devices = [
-    {
-        "id": 1,
-        "name": "Lightbulb",
-        "iconUrl": "/images/plug.svg",
-        "roomId": 1,
-        "userId": 1
-    },
-    {
-        "id": 2,
-        "name": "Air Conditioner",
-        "iconUrl": "/images/plug.svg",
-        "roomId": 1,
-        "userId": 1
-    },
-    {
-        "id": 3,
-        "name": "Eletctric Switch",
-        "iconUrl": "/images/bulb.svg",
-        "roomId": 1,
-        "userId": 1
-    },
-    {
-        "id": 4,
-        "name": "Water Heater",
-        "iconUrl": "/images/bulb.svg",
-        "roomId": 3,
-        "userId": 1
-    }
-];
+export default function SceneComposer({ devices = [], rooms = [], selected, onScene }) {
+    const roomWithDevices = useMemo(() => {
+        let id = 0;
+        const mappedRooms = rooms.map(room => {
+            const devicesArray = [];
+            const devicesFilter = devices.filter(device => room.id === device.roomId);
 
-const rooms = [
-    {
-        "name": "Living Room",
-        "type": "living-room",
-        "id": 1,
-        "propertyId": 1,
-        "userId": 1
-    },
-    {
-        "name": "Bedroom",
-        "type": "bedroom",
-        "id": 2,
-        "propertyId": 1,
-        "userId": 1
-    },
-    {
-        "name": "Bathroom",
-        "type": "bathroom",
-        "id": 3,
-        "propertyId": 1,
-        "userId": 1
-    },
-    {
-        "name": "Toilet",
-        "type": "toilet",
-        "id": 4,
-        "propertyId": 1,
-        "userId": 1
-    },
-    {
-        "name": "Patio",
-        "type": "patio",
-        "id": 5,
-        "propertyId": 1,
-        "userId": 1
-    }
-];
+            devicesFilter.map((device) => {
+                devicesArray.push(
+                    {
+                        id: id++,
+                        iconUrl: device.iconUrl,
+                        title: "ON",
+                        variant: "on",
+                    },
+                    {
+                        id: id++,
+                        iconUrl: device.iconUrl,
+                        title: "OFF",
+                        variant: "off",
+                    }
+                );
+            });
 
-const scenes = rooms.forEach(room => {
-     
-     <Typography variant="h1">{room.name}</Typography>
-     {devices.map(device => {
-        <Grid item xs={1} md={2} lg={3}>
+            return {
+                id: room.id,
+                name: room.name,
+                roomDevices: devicesArray,
+            };
+        });
 
-            </Grid>
-     })}
-    
-})
-
-export default function SceneComposer({ selected, onScene }) {
+        return mappedRooms;
+    }, [devices, rooms]);
 
     return (
-        <div>
-            <Grid>
+        <div className={classNames(styles["scene-composer-wrapper"])}>
+            <Grid container spacing={5} direction="column">
+                {roomWithDevices.map((room, index) => {
+                    if (room.roomDevices.length)
+                    return (
+                        <Grid item key={index}>
+                            <Typography variant="h4" paddingBottom={2}>{room.name}</Typography>
+                            <Scenes cards={room.roomDevices} selected={selected} onScene={(e) => onScene(e.target)} />
+                        </Grid>
+                    )
+                })}
             </Grid>
         </div>
-    )
+    );
 }

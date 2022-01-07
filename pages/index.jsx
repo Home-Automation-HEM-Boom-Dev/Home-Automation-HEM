@@ -11,11 +11,14 @@ import Cameras from "../src/components/cameras/Cameras.jsx"
 import { Container, Grid, Typography } from "@mui/material";
 import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
-import Modal from "../src/components/modal/Modal.jsx";
-
-
+import SceneComposer from "../src/components/scenes/SceneComposer";
+import roomsData from "../data/rooms.json"
+import devicesData from "../data/devices.json"
+import { useState } from "react";
 
 export default function Dashboard() {
+  const [choosenCard, setChoosenCard] = useState(0);
+
   const data = [
     { temperature: 25, hour: 12 },
     { temperature: 13, hour: 13 },
@@ -37,7 +40,7 @@ export default function Dashboard() {
   const cameras = [
     { videoUrl: "/images/balcony.mp4" },
     { videoUrl: "/images/bathroom.mp4" },
-    { videoUrl: "/images/garden.mp4" },
+    { videoUrl: "/images/kitchen.mp4" },
     { videoUrl: "/images/kitchen.mp4" },
     { videoUrl: "/images/living room 2.mp4" },
     { videoUrl: "/images/front-door.mp4" },
@@ -49,15 +52,18 @@ export default function Dashboard() {
     { iconUrl: '/images/bed.svg', title: 'Bathroom' },
     { iconUrl: '/images/bed.svg', title: 'Toilet' },
     { iconUrl: '/images/bed.svg', title: 'Patio' },
-    { iconUrl: '/images/plus.svg', title: 'Add room', outlined: true },
+    { iconUrl: '/images/outlined-plus.svg', title: 'Add room', outlined: true },
   ];
 
   const devices = [
-    { iconUrl: '/images/bed.svg', title: 'Living room' },
-    { iconUrl: '/images/bed.svg', title: 'Bedroom' },
-    { iconUrl: '/images/bed.svg', title: 'Bathroom' },
-    { iconUrl: '/images/bed.svg', title: 'Toilet' },
+    { iconUrl: '/images/bulb.svg', variant: 'ON' },
+    { iconUrl: '/images/bulb.svg', variant: 'OFF' },
+    { iconUrl: '/images/plug.svg', variant: 'OFF' },
+    { iconUrl: '/images/plug.svg', variant: 'OFFLINE' },
+    { iconUrl: '/images/plus.svg', outlined: true }
   ]
+
+  const [selected, setSelected] = useState();
 
   return (
     <>
@@ -66,16 +72,19 @@ export default function Dashboard() {
         <Navigation />
         <Grid container rowSpacing={10} columnSpacing={4}>
           <Grid item>
-            <div className={classNames(styles["thermostat-header"])}>
+            <div className={classNames(styles["title"])}>
               <Typography variant="h3">Thermostat</Typography>
             </div>
             <Thermostat data={data} />
           </Grid>
           <Grid item>
+            <div className={classNames(styles["title"])}>
+              <Typography variant="h3">Scenes</Typography>
+            </div>
             <Scenes cards={cards} />
           </Grid>
           <Grid item>
-            <div className={classNames(styles["cameras-header"])}>
+            <div className={classNames(styles["title"])}>
               <Typography variant="h3">Cameras</Typography>
             </div>
             <Cameras cameras={cameras} hasButton={true} />
@@ -88,7 +97,7 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
-      <Modal title="title" buttonText="button"/>
+      <SceneComposer devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected} />
     </>
   );
 }

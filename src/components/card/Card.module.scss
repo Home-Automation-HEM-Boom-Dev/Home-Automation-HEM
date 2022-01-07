@@ -3,6 +3,7 @@
 .card{
     max-width: 100%;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .card-component {
@@ -14,6 +15,7 @@
     height: 183px;
     background-color: rgb(colors.$primary_main, 10%) !important;
     border-radius: 20px !important;
+    position: relative;
 }
 
 .card-title {
@@ -24,9 +26,33 @@
 }
 
 .chip {
-    position: relative;
-    margin-right: 1rem;
-    margin-left: auto;
-    margin-top: 1rem;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    background-color: #EB675C !important;
+    color: white !important;
+    border-radius: 7px !important;
+    font-weight: 700 !important;
+    max-height: 25px;
+}
+
+.selected{
+    background-color: #7441F3 !important;
+    .card-title{
+        color: white;
+    }
+    img{
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(293deg) brightness(200%) contrast(108%);
+    }
+}
+
+.offline{
+    background-color: #F7EAE9 !important;
+    .card-title{
+        color: #EB675C
+    }
+    img{
+        filter: invert(52%) sepia(39%) saturate(3432%) hue-rotate(327deg) brightness(102%) contrast(84%);
+    }
 }
 
