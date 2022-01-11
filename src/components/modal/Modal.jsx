@@ -7,7 +7,7 @@ export default function Modal({ open = true, title = "Modal title", buttonText =
         <Dialog open={open} onClose={handleClose} className={classNames(styles["modal-wrapper"])} >
             <DialogTitle>{title}</DialogTitle>
             <DialogContent>{children}</DialogContent>
-            <Button onClick={handleSubmit} color={buttonProps.color} variant={"contained"}>{buttonText}</Button>
+            <Button onClick={handleSubmit} sx={{display: buttonProps.display}} color={buttonProps.color} variant={"contained"}>{buttonText}</Button>
         </Dialog>
     )
 }
