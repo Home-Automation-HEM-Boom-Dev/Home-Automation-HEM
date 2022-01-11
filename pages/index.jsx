@@ -12,13 +12,16 @@ import { Container, Grid, Typography } from "@mui/material";
 import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
 import SceneComposer from "../src/components/scenes/SceneComposer";
+import AddScene from "../src/components/scenes/AddScene";
+import AddRoom from "../src/components/rooms/AddRoom";
+import ChangeRoom from "../src/components/rooms/ChangeRoom";
+import EditScene from "../src/components/scenes/EditScene"
 import roomsData from "../data/rooms.json"
 import devicesData from "../data/devices.json"
 import { useState } from "react";
 
 export default function Dashboard() {
-  const [choosenCard, setChoosenCard] = useState(0);
-
+  
   const data = [
     { temperature: 25, hour: 12 },
     { temperature: 13, hour: 13 },
@@ -97,7 +100,10 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
-      <SceneComposer devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected} />
+      {/* <AddScene title={"ADD SCENE"} buttonText={"ADD NEW SCENE"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
+      {/* <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
+      {/* <AddRoom onSubmit={() => {}} handleClose={() => {}}/> */}
+      <ChangeRoom onSubmit={() => {}} handleClose={() => {}} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> 
     </>
   );
 }

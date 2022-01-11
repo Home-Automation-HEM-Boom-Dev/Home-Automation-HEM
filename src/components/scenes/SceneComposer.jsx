@@ -6,7 +6,7 @@ import { useMemo } from "react";
 
 export default function SceneComposer({ devices = [], rooms = [], selected, onScene }) {
     const roomWithDevices = useMemo(() => {
-        let id = 0;
+        let id = 1;
         const mappedRooms = rooms.map(room => {
             const devicesArray = [];
             const devicesFilter = devices.filter(device => room.id === device.roomId);
