@@ -50,7 +50,6 @@ export default function Registrer() {
 
     return(
        <div className={classNames(styles["register-form"])}>
-           {/* <form onSubmit={handleClick}> */}
            <TextField
                name="email"
                type="email"
@@ -58,10 +57,7 @@ export default function Registrer() {
                className={classNames(styles["form-textfield"])}
                InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%", "marginTop": "5%"}}
-            //    value={userDetails.email}
-            //    onChange={handleChange}
-           
-              
+
            />
            <TextField
                name="password"
@@ -70,8 +66,6 @@ export default function Registrer() {
                className={classNames(styles["form-textfield"])} 
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%"}}
-            //    value={userDetails.password}
-            //    onChange={handleChange}
             
            />
            <TextField 
@@ -81,15 +75,38 @@ export default function Registrer() {
                className={classNames(styles["form-textfield"])}
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "6%"}}
-            //    value={userDetails.rePassword}
-            //    onChange={handleChange}
-              
+
            />
            <Button 
-           type="submit"
            className={classNames(styles["submit-button"])} 
            style={{"borderRadius": "40px", "marginBottom": "5%"}} variant="contained">REGISTER</Button>
-           {/* </form> */}
+          
        </div>
     )
 }
+
+// import Register from "../../src/components/register/Register";
+// import styles from "../../src/components/register/RegisterPage.module.scss";
+// import classNames from "classnames";
+// import { Container, Paper } from "@mui/material";
+
+// export default function RegisterPage() {
+//     return (
+//         <div className={classNames(styles['wrapper'])}>
+//             {/* <Container style={{ height: "100vh", display: "flex", alignItems: "center"}} >
+//                 <Paper style={{ width: "fit-content", margin: "0 auto"}} >
+//                     <Register />
+//                 </Paper>
+//             </Container> */}
+//         </div>
+//     )
+// }
+
+// @use "../../styles/colors.scss";
+
+// .wrapper {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background: linear-gradient(#7441F3 50%, #F8F8F8 50%);
+// }
