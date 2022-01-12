@@ -7,7 +7,7 @@ import classNames from "classnames";
 
 
 
-export default function Registrer() {
+export default function Register() {
     // let formValid = false;
     // const [userDetails, setUserDetails] = useState({
     //     email: "",
@@ -53,7 +53,6 @@ export default function Registrer() {
            <TextField
                type="email"
                placeholder="Email"
-               sx={{ m: 1, width: '36ch'}}
                className={classNames(styles["textfield"])}
                InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%", "marginTop": "5%"}}
@@ -61,7 +60,6 @@ export default function Registrer() {
            <TextField
                type="password"
                placeholder="Password"
-               sx={{ m: 1, width: '36ch'}}
                className={classNames(styles["textfield"])} 
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%"}} 
@@ -70,7 +68,6 @@ export default function Registrer() {
                type="password"
                placeholder="Retype Password"
                className={classNames(styles["textfield"])}
-               sx={{ m: 1, width: '36ch'}}
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "6%"}}
            />
