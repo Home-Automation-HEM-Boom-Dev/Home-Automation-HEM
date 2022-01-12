@@ -54,25 +54,26 @@ export default function Registrer() {
                name="email"
                type="email"
                placeholder="Email"
-               className={classNames(styles["form-textfield"])}
+               sx={{ m: 1, width: '36ch'}}
+               className={classNames(styles["textfield"])}
                InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%", "marginTop": "5%"}}
 
            />
            <TextField
-               name="password"
                type="password"
                placeholder="Password"
-               className={classNames(styles["form-textfield"])} 
+               sx={{ m: 1, width: '36ch'}}
+               className={classNames(styles["textfield"])} 
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%"}}
             
            />
            <TextField 
-               name="rePassword"
                type="password"
                placeholder="Retype Password"
-               className={classNames(styles["form-textfield"])}
+               className={classNames(styles["textfield"])}
+               sx={{ m: 1, width: '36ch'}}
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "6%"}}
 
