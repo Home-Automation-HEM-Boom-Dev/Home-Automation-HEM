@@ -6,11 +6,11 @@ import { Container, Paper } from "@mui/material";
 export default function RegisterPage() {
     return (
         <div className={classNames(styles['wrapper'])}>
-            <Container style={{ height: "100vh", display: "flex", alignItems: "center"}} >
+            {/* <Container style={{ height: "100vh", display: "flex", alignItems: "center"}} >
                 <Paper style={{ width: "fit-content", margin: "0 auto"}} >
                     <Register />
                 </Paper>
-            </Container>
+            </Container> */}
         </div>
     )
 }
