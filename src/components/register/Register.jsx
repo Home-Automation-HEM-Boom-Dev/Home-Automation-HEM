@@ -51,14 +51,12 @@ export default function Registrer() {
     return(
        <div className={classNames(styles["register-form"])}>
            <TextField
-               name="email"
                type="email"
                placeholder="Email"
                sx={{ m: 1, width: '36ch'}}
                className={classNames(styles["textfield"])}
                InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "4%", "marginTop": "5%"}}
-
            />
            <TextField
                type="password"
@@ -66,8 +64,7 @@ export default function Registrer() {
                sx={{ m: 1, width: '36ch'}}
                className={classNames(styles["textfield"])} 
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
-               style={{ "width": "90%", "marginBottom": "4%"}}
-            
+               style={{ "width": "90%", "marginBottom": "4%"}} 
            />
            <TextField 
                type="password"
@@ -76,11 +73,12 @@ export default function Registrer() {
                sx={{ m: 1, width: '36ch'}}
                InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} 
                style={{ "width": "90%", "marginBottom": "6%"}}
-
            />
            <Button 
            className={classNames(styles["submit-button"])} 
-           style={{"borderRadius": "40px", "marginBottom": "5%"}} variant="contained">REGISTER</Button>
+           style={{"borderRadius": "40px", "marginBottom": "5%"}} variant={"contained"}>
+               REGISTER
+           </Button>
           
        </div>
     )
