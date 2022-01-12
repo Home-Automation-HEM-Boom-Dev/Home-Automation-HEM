@@ -18,6 +18,7 @@ import ChangeRoom from "../src/components/rooms/ChangeRoom";
 import EditScene from "../src/components/scenes/EditScene"
 import roomsData from "../data/rooms.json"
 import devicesData from "../data/devices.json"
+import AddDevice from "../src/components/devices/AddDevice";
 import { useState } from "react";
 
 export default function Dashboard() {
@@ -68,6 +69,10 @@ export default function Dashboard() {
 
   const [selected, setSelected] = useState();
 
+  function getobj(obj){
+    return obj
+  }
+
   return (
     <>
       <Container maxWidth={"false"} disableGutters className={classNames(styles.container)}>
@@ -103,7 +108,8 @@ export default function Dashboard() {
       {/* <AddScene title={"ADD SCENE"} buttonText={"ADD NEW SCENE"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
       {/* <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
       {/* <AddRoom onSubmit={() => {}} handleClose={() => {}}/> */}
-      <ChangeRoom onSubmit={() => {}} handleClose={() => {}} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> 
+      {/* <ChangeRoom onSubmit={() => {}} handleClose={() => {}} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/>  */}
+      <AddDevice onDevice={getobj({"id": 1, "name": "Lightbulb", "iconUrl": "/images/plug.svg", "roomId": 1, "userId": 1})}/>
     </>
   );
 }
