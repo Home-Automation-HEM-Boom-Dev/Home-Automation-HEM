@@ -50,10 +50,10 @@ export default function Register() {
 
     return(
         <div className={classNames(styles["register-form"])}>
-            <TextField id="email-start-adornment" className={classNames(styles["textfield"])} sx={{ m: 1, width: '36ch'}} InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} />
-            <TextField id="password-start-adornment" className={classNames(styles["textfield"])} sx={{ m: 1, width: '36ch' }} InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} />
-            <TextField id="password-start-adornment" className={classNames(styles["textfield"])} sx={{ m: 1, width: '36ch' }} InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} />
-            <Button className={classNames(styles["register-button"])} variant={"contained"} color="inherit">Login</Button>
+            <TextField  className={classNames(styles["textfield"])}  InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} />
+            <TextField  className={classNames(styles["textfield"])}  InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} />
+            <TextField  className={classNames(styles["textfield"])}  InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} />
+            <Button className={classNames(styles["register-button"])} variant={"contained"} >Register</Button>
         </div>
     //    <div className={classNames(styles["register-form"])}>
     //        <TextField
