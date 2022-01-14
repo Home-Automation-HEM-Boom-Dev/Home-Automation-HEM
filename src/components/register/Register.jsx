@@ -13,26 +13,30 @@ export default function Register() {
     return(
         <div className={classNames(styles["register-form"])}>
             <TextField  
+            style={{marginBottom: "5%"}}
             placeholder="Email"
             type="email"
-            className={classNames(styles["textfield"])}  
+            className={classNames(styles["text-field"])}  
             InputProps={{startAdornment: <InputAdornment position="start">
             <EmailIcon sx={{color: "black"}}/>
             </InputAdornment>}} />
-            <TextField  className={classNames(styles["textfield"])}  
+            <TextField  className={classNames(styles["text-field"])}  
+            style={{marginBottom: "5%"}}
             placeholder="Password"
             type="password"
             InputProps={{startAdornment: <InputAdornment position="start">
             <LockIcon sx={{color: "black"}}/>
             </InputAdornment>}} />
-            <TextField  className={classNames(styles["textfield"])} 
+            <TextField  className={classNames(styles["text-field"])} 
+            style={{marginBottom: "5%"}}
              placeholder="Retype Password"
              type="password" 
             InputProps={{startAdornment: <InputAdornment position="start">
             <LockIcon sx={{color: "black"}}/>
             </InputAdornment>}} />
             <Button className={classNames(styles["register-button"])} 
-            variant={"contained"} >Register</Button>
+            style={{marginTop: "5%"}}
+            variant={"contained"}>Register</Button>
         </div>
             )
         }
@@ -108,28 +112,5 @@ export default function Register() {
     //    </div>
 
 
-// import Register from "../../src/components/register/Register";
-// import styles from "../../src/components/register/RegisterPage.module.scss";
-// import classNames from "classnames";
-// import { Container, Paper } from "@mui/material";
 
-// export default function RegisterPage() {
-//     return (
-//         <div className={classNames(styles['wrapper'])}>
-//             {/* <Container style={{ height: "100vh", display: "flex", alignItems: "center"}} >
-//                 <Paper style={{ width: "fit-content", margin: "0 auto"}} >
-//                     <Register />
-//                 </Paper>
-//             </Container> */}
-//         </div>
-//     )
-// }
 
-// @use "../../styles/colors.scss";
-
-// .wrapper {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background: linear-gradient(#7441F3 50%, #F8F8F8 50%);
-// }
