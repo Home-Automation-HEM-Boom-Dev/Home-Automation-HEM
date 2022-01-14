@@ -8,6 +8,35 @@ import classNames from "classnames";
 
 
 export default function Register() {
+
+
+    return(
+        <div className={classNames(styles["register-form"])}>
+            <TextField  
+            placeholder="Email"
+            type="email"
+            className={classNames(styles["textfield"])}  
+            InputProps={{startAdornment: <InputAdornment position="start">
+            <EmailIcon sx={{color: "black"}}/>
+            </InputAdornment>}} />
+            <TextField  className={classNames(styles["textfield"])}  
+            placeholder="Password"
+            type="password"
+            InputProps={{startAdornment: <InputAdornment position="start">
+            <LockIcon sx={{color: "black"}}/>
+            </InputAdornment>}} />
+            <TextField  className={classNames(styles["textfield"])} 
+             placeholder="Retype Password"
+             type="password" 
+            InputProps={{startAdornment: <InputAdornment position="start">
+            <LockIcon sx={{color: "black"}}/>
+            </InputAdornment>}} />
+            <Button className={classNames(styles["register-button"])} 
+            variant={"contained"} >Register</Button>
+        </div>
+            )
+        }
+        
     // let formValid = false;
     // const [userDetails, setUserDetails] = useState({
     //     email: "",
@@ -48,13 +77,6 @@ export default function Register() {
     //     })
     // }
 
-    return(
-        <div className={classNames(styles["register-form"])}>
-            <TextField  className={classNames(styles["textfield"])}  InputProps={{startAdornment: <InputAdornment position="start"><EmailIcon sx={{color: "black"}}/></InputAdornment>}} />
-            <TextField  className={classNames(styles["textfield"])}  InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} />
-            <TextField  className={classNames(styles["textfield"])}  InputProps={{startAdornment: <InputAdornment position="start"><LockIcon sx={{color: "black"}}/></InputAdornment>}} />
-            <Button className={classNames(styles["register-button"])} variant={"contained"} >Register</Button>
-        </div>
     //    <div className={classNames(styles["register-form"])}>
     //        <TextField
     //            type="email"
@@ -84,8 +106,7 @@ export default function Register() {
     //        </Button>
           
     //    </div>
-    )
-}
+
 
 // import Register from "../../src/components/register/Register";
 // import styles from "../../src/components/register/RegisterPage.module.scss";
