@@ -7,6 +7,7 @@
     justify-content: center;
     background-color: colors.$text_primary;
     max-width: 400px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding: 5% 10%;
@@ -20,7 +21,8 @@
     width: 90%;
 }
 
-.textfield {
+.text-field {
+    margin-top: 2%;
     margin-bottom: 2%;
 }
 
