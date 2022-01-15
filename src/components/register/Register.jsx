@@ -9,22 +9,22 @@ import { useEffect, useState } from "react";
 
 export default function Register({onSubmit}) {
     
-    const [userName, setUserName] = useState('');
-    const [userPass, setUserPass] = useState('');
-    const [userRePass, setUserRePass] = useState('');
+    const [email, setUserEmail] = useState('');
+    const [password, setUserPassword] = useState('');
+    const [rePassword, setUserRePass] = useState('');
 
     function fetchUserData() {
         if(userPass === userRePass && userName !== "") {
-            const fetchData = {
-                userName,
-                userPass
-            }
             fetch('https://hem-api.herokuapp.com/register', {
                     method: "POST",
                     headers: {
                         'Content-type': 'application/json'
                     },
-                    body: JSON.stringify(fetchData)
+                    body: JSON.stringify({
+                        "email": email,
+                        "password": password
+                    })
+                    
                 })
                 .then(res => res.json())
                 .then(data => console.log("Success:"))
@@ -44,16 +44,16 @@ export default function Register({onSubmit}) {
             style={{marginBottom: "5%"}}
             placeholder="Email"
             type="email"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
+            value={email}
+            onChange={(e) => setUserEmail(e.target.value)}
             className={classNames(styles["text-field"])}  
             InputProps={{startAdornment: <InputAdornment position="start">
             <EmailIcon sx={{color: "black"}}/>
             </InputAdornment>}} required />
             <TextField  className={classNames(styles["text-field"])}  
             style={{marginBottom: "5%"}}
-            value={userPass}
-            onChange={(e) => setUserPass(e.target.value)}
+            value={password}
+            onChange={(e) => setUserPassword(e.target.value)}
             placeholder="Password"
             type="password"
             InputProps={{startAdornment: <InputAdornment position="start">
@@ -61,8 +61,8 @@ export default function Register({onSubmit}) {
             </InputAdornment>}} required/>
             <TextField  className={classNames(styles["text-field"])} 
             style={{marginBottom: "5%"}}
-            value={userRePass}
-            onChange={(e) => setUserRePass(event.target.value)}
+            value={rePassword}
+            onChange={(e) => setUserRePass(e.target.value)}
             placeholder="Retype Password"
             type="password" 
             InputProps={{startAdornment: <InputAdornment position="start">
