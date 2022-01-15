@@ -15,11 +15,8 @@ export default function Register() {
 
     function fetchUserData(e) {
        e.preventDefault();
-        const data = {
-           "email": email,
-           "password": password
-        };
-        console.log(data)
+        const data = {email, password};
+   
         if(password === rePassword && email !== "") {
             fetch('https://hem-api.herokuapp.com/register', {
                     method: "POST",
@@ -28,7 +25,6 @@ export default function Register() {
                     },
                     body: JSON.stringify(data)
                 })
-                .then(() => console.log('new user added'))
             }
         }
     
