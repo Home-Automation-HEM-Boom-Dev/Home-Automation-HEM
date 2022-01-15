@@ -7,33 +7,27 @@ import { useState } from "react";
 
 
 
-export default function Register() {
+export default function Register({onSubmit}) {
     
     const [email, setUserEmail] = useState('');
     const [password, setUserPassword] = useState('');
     const [rePassword, setUserRePass] = useState('');
 
-    function fetchUserData(e) {
-       e.preventDefault();
-        const data = {email, password};
+    // function fetchUserData(e) {
+    //    e.preventDefault();
+        // const data = {email, password};
    
-        if(password === rePassword && email !== "") {
-            fetch('https://hem-api.herokuapp.com/register', {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-            }
-        }
+        // if(password === rePassword && email !== "") {
+        //  const data = {email,password};
+        
     
     return(
     <div className={classNames(styles["register-form"])}>
-        <form onSubmit={fetchUserData}>
+        <form onSubmit={onSubmit}>
             <TextField  
                 style={{marginBottom: "5%"}}
                 placeholder="Email"
+                name="email"
                 type="email"
                 value={email}
                 onChange={(e) => setUserEmail(e.target.value)}
@@ -44,6 +38,7 @@ export default function Register() {
             <TextField  className={classNames(styles["text-field"])}  
                 style={{marginBottom: "5%"}}
                 value={password}
+                name="password"
                 onChange={(e) => setUserPassword(e.target.value)}
                 placeholder="Password"
                 type="password"
