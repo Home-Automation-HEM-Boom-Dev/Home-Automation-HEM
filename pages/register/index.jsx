@@ -10,9 +10,7 @@ export default function RegisterPage() {
             <Container style={{ height: "100vh", display: "flex", alignItems: "center"}} >
                 <Paper style={{ width: "fit-content", margin: "0 auto"}} >
                     <Register />
-                    
                 </Paper>
-                
             </Container>
             <div className={classNames(styles['login-redirect'])} >
                 <p>Already registered?<a href="/login">Go to login.</a></p> 
