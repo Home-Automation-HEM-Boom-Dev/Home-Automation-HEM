@@ -14,7 +14,7 @@ export default function Register() {
     const [rePassword, setUserRePass] = useState('');
 
     function fetchUserData(e) {
-        e.preventDefault();
+       e.preventDefault();
         const data = {
            "email": email,
            "password": password
@@ -29,11 +29,8 @@ export default function Register() {
                     body: JSON.stringify(data)
                 })
                 .then(() => console.log('new user added'))
-                .catch((error) => {
-                throw new error(error);
-            });
+            }
         }
-    }
     
     return(
     <div className={classNames(styles["register-form"])}>
