@@ -5,22 +5,28 @@ import { Container, Paper } from "@mui/material";
 
 
 export default function RegisterPage() {
-    function handleSubmit(event) {
+    async function registerUser(event) {
         event.preventDefault()
         const formData = new FormData(event.target);
         const data = {
             email: formData.get('email'),
             password: formData.get('password'),
         }
-    
-        fetch('https://hem-api.herokuapp.com/register', {
+      
+
+        await fetch('https://hem-api.herokuapp.com/register', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-
+            .then((response) => {
+                console.log(response);
+                if (response.ok) {
+                    alert(`Success ! ${data.email} Registered!`);
+                }
+            })
     }
 
 
@@ -28,7 +34,7 @@ export default function RegisterPage() {
         <div className={classNames(styles['wrapper'])}>
             <Container style={{ height: "100vh", display: "flex", alignItems: "center" }} >
                 <Paper style={{ width: "fit-content", margin: "0 auto" }} >
-                    <Register onSubmit={handleSubmit} />
+                    <Register onSubmit={registerUser} />
                 </Paper>
             </Container>
             <div className={classNames(styles['login-redirect'])} >

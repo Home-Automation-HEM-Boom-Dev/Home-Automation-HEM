@@ -32,6 +32,7 @@ export default function Register({onSubmit}) {
                 value={email}
                 onChange={(e) => setUserEmail(e.target.value)}
                 className={classNames(styles["text-field"])}  
+                sx={{ m: 1, width: '36ch' }}
                 InputProps={{startAdornment: <InputAdornment position="start">
                 <EmailIcon sx={{color: "black"}}/>
                 </InputAdornment>}} required />
@@ -40,6 +41,7 @@ export default function Register({onSubmit}) {
                 value={password}
                 name="password"
                 onChange={(e) => setUserPassword(e.target.value)}
+                sx={{ m: 1, width: '36ch' }}
                 placeholder="Password"
                 type="password"
                 InputProps={{startAdornment: <InputAdornment position="start">
@@ -49,6 +51,7 @@ export default function Register({onSubmit}) {
                 style={{marginBottom: "5%"}}
                 value={rePassword}
                 onChange={(e) => setUserRePass(e.target.value)}
+                sx={{ m: 1, width: '36ch' }}
                 placeholder="Retype Password"
                 type="password" 
                 InputProps={{startAdornment: <InputAdornment position="start">
