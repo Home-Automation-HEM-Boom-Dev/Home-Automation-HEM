@@ -3,9 +3,12 @@ import classNames from "classnames";
 import { Container, Paper } from "@mui/material";
 import styles from "../../src/components/login/LoginPage.module.scss"
 import { useRouter } from "next/dist/client/router";
+import { useContext } from 'react';
+import { AppContext } from '../../src/components/common/AppProvider';
 
 export default function LoginPage() {
     const router = useRouter();
+    const dashboard = useContext(AppContext);
 
     async function loginUser(event) {
         event.preventDefault()
@@ -27,6 +30,10 @@ export default function LoginPage() {
             const data = await res.json();
             localStorage.setItem("accessToken", data["accessToken"]);
             router.push("/");
+        }else{
+            alert('Unregistered email! Please register before loging in')
+            dashboard.refresh();
+            router.push('/register');
         }
     }
 

@@ -11,18 +11,12 @@ import Cameras from "../src/components/cameras/Cameras.jsx"
 import { Container, Grid, Typography } from "@mui/material";
 import classNames from 'classnames';
 import styles from "./Dashboard.module.scss";
-import SceneComposer from "../src/components/scenes/SceneComposer";
-import AddScene from "../src/components/scenes/AddScene";
-import AddRoom from "../src/components/rooms/AddRoom";
-import ChangeRoom from "../src/components/rooms/ChangeRoom";
-import EditScene from "../src/components/scenes/EditScene"
-import roomsData from "../data/rooms.json"
-import devicesData from "../data/devices.json"
-import AddDevice from "../src/components/devices/AddDevice";
-import { useState } from "react";
+import { useContext, useEffect } from "react";
+import { AppContext } from "../src/components/common/AppProvider";
 
 export default function Dashboard() {
-  
+  const dashboard = useContext(AppContext);
+
   const data = [
     { temperature: 25, hour: 12 },
     { temperature: 13, hour: 13 },
@@ -59,19 +53,9 @@ export default function Dashboard() {
     { iconUrl: '/images/outlined-plus.svg', title: 'Add room', outlined: true },
   ];
 
-  const devices = [
-    { iconUrl: '/images/bulb.svg', variant: 'ON' },
-    { iconUrl: '/images/bulb.svg', variant: 'OFF' },
-    { iconUrl: '/images/plug.svg', variant: 'OFF' },
-    { iconUrl: '/images/plug.svg', variant: 'OFFLINE' },
-    { iconUrl: '/images/plus.svg', outlined: true }
-  ]
-
-  const [selected, setSelected] = useState();
-
-  function getobj(obj){
-    return obj
-  }
+  useEffect(() => {
+    dashboard.refresh()
+  }, [])
 
   return (
     <>
@@ -105,11 +89,6 @@ export default function Dashboard() {
           </Grid>
         </Grid>
       </Container >
-      {/* <AddScene title={"ADD SCENE"} buttonText={"ADD NEW SCENE"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
-      {/* <EditScene title={"EDIT SCENE"} buttonText={"SAVE CHANGES"} onSubmit={() => {}} handleClose={() => {}} devices={devicesData.devices} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/> */}
-      {/* <AddRoom onSubmit={() => {}} handleClose={() => {}}/> */}
-      {/* <ChangeRoom onSubmit={() => {}} handleClose={() => {}} rooms={roomsData.rooms} selected={selected} onScene={setSelected}/>  */}
-      <AddDevice onDevice={getobj({"id": 1, "name": "Lightbulb", "iconUrl": "/images/plug.svg", "roomId": 1, "userId": 1})}/>
     </>
   );
 }
